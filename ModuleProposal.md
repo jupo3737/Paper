@@ -151,6 +151,8 @@ As we can see, classes are syntactic sugar for function in the current release o
 The Proposal:
 -------------
 Overall, the goals set forth in module functionality in ES.next include providing faster compilation, easy external loading, and above all increasing simplicity and usablility. 
-This reasoning in itself, provides the justification for including modules in the the development of javascript....
+This reasoning in itself, provides the justification for including modules in the the development of javascript.
+Well written modules have the advantage of making code more scalable. That is, when designed well, modules can work independantly of eachother, and can be added or removed efficiently. This has the benefit of making collaboration much easier, as developers can be assigned with the task of designing certain modules independant of one another, and only have to worry about minimal conflicts. Coding styles or preferences can be utilized by the individual, and there is no conflict when they are brought together, hindering the coding process.
+
 
 > Sources that will be used are: [strawman:simple_module_functions](http://wiki.ecmascript.org/doku.php?id=strawman:simple_module_functions) and [blogs  that we find](http://addyosmani.com/blog/a-few-new-things-coming-to-javascript/)
