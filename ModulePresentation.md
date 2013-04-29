@@ -19,7 +19,7 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##How it looked before
 
- ```javascript
+ 	```javascript
 	var MODULE = (function (my) {
 	// add capabilities...
 
@@ -44,7 +44,7 @@ Thomas Spooner, Justin Powell, James Ontiveros
 * these are basically objects that a programmer may use	
 	
 	```javascript
-	module myCar at "Car.js"
+	module myCar at "Car.js";
 	```
 
 ##Compared to other languages
