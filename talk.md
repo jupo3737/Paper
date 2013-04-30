@@ -88,18 +88,18 @@ Thomas Spooner, Justin Powell, James Ontiveros
 ##Example Classes: Before and proposed
 
 ```javascript  
-    module widgets {
-    // ...
-      class DropDownButton extends Widget {
-      constructor(attributes) {
-      super(attributes);
-      this.buildUI();
-    }
-    buildUI() {
-      this.domNode.onclick = function(){
-      // ...
-    };
-    }
+module widgets {
+  // ...
+  class DropDownButton extends Widget {
+    constructor(attributes) {
+    super(attributes);
+    this.buildUI();
+  }
+  buildUI() {
+   this.domNode.onclick = function(){
+   // ...
+  };
+ }
   }
 }
 ```
