@@ -27,34 +27,31 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##How it looked before
 * Previously implementable through "module pattern" - A common Javascript coding pattern
-* Example module pattern with export capabilities:
+* Very basic module pattern with export capabilities:
 
 ```javascript
-var MODULE = (function () {
-	var my = {},
-		privateVariable = 1;
-
-	function privateMethod() {
-		// ...
-	}
-
-	my.moduleProperty = 1;
-	my.moduleMethod = function () {
-		// ...
-	};
-
-	return my;
-}());
+  var MODULE = (function () {
+    var my = {},
+    privateVariable = 1;
+    function privateMethod() {  // ...
+    }
+    my.moduleProperty = 1;
+    my.moduleMethod = function () {  // ...
+    };
+    return my;
+  }());
 ```
-This function returns my, the var to be exported. Now lets see what is proposed in es.next...
+
+Now lets see what is proposed in es.next...
 
 ##Module Example
 ```javascript
   module Car{
-  // import code here
-  // export code here
+    // import code here
+    // export code here
   }
 ```
+
 ##Module Instances
 * These are modules that have been evaluated, linked to other modules, or holds lexically encapsulated data
 * These are basically objects that a programmer may use	
@@ -92,25 +89,25 @@ This function returns my, the var to be exported. Now lets see what is proposed 
     // Internal
     var license-plate = "555-444";
     // External
-      export var miles = 5000;
-       export function drive(speed, direction){
-       console.log('details: ', speed, direction);
-	}
+    export var miles = 5000;
+    export function drive(speed, direction){
+      console.log('details: ', speed, direction);
+    }
   }
 ```
+
 ##Comparison to Classes
 * Modules basically have public and private variables, internal and external parts of the module
 * Modules allow for the reuse of code throughout an entire project
 
-##Example Classes: Before and proposed
+##Example Classes: Before
+
 ```javascript
 var widgets = (function(global) {
-  // ...
   function DropDownButton(attributes) {
     Widget.call(this, attributes);
     this.buildUI();
   }
- 
   DropDownButton.prototype = Object.create(Widget.prototype, {
     constructor: { value: DropDownButton },
     buildUI:     {
@@ -124,22 +121,22 @@ var widgets = (function(global) {
 })(this);
 ```
 
+##Example Classes: Proposed
 ```javascript  
-module widgets {
-  // ...
-  class DropDownButton extends Widget {
-    constructor(attributes) {
-    super(attributes);
-    this.buildUI();
+  module widgets {
+    class DropDownButton extends Widget {
+      constructor(attributes) {
+        super(attributes);
+        this.buildUI();
+      }
+      buildUI() {
+        this.domNode.onclick = function(){  // ...
+        };
+      }
     }
-    buildUI() {
-      this.domNode.onclick = function(){
-      // ...
-      };
-    }
-    }
-}
+  } 
 ```
+
 ##Module Loader API
 * Es.next aims to develop a "dynamic, reflexive API for loading module scripts
 * Functionality similar to import: Anything defined as an export can be consumed
@@ -151,6 +148,7 @@ module widgets {
   console.log('Error:' + err);
   });
 ```
+
 Custom loaders can be developed using the Loader constructor
 
 ##Proposal
