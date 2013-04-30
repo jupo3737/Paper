@@ -19,7 +19,7 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##How it looked before
 
-   ```javascript
+   	```javascript
 	var MODULE = (function (my) {
 	// add capabilities...
 
