@@ -80,7 +80,7 @@ FOO=function(){
 ```
 
 ##Exporting Code
-* Txporting lets the programmer choose which blocks of code can be accessed by the porgram
+* Exporting lets the programmer choose which blocks of code can be accessed by the program
 * Declarations declare that a local binding at the top-level of the module is visible externally to the module
 * Other modules can read the module exports but cannot modify or reset them
 
