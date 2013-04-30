@@ -17,7 +17,7 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##History
 * Modules have been in javascript, but they weren't easy to use
-* 
+* Modules were long, ugly and hard to follow at times
 
 ##How it looked before
 
@@ -135,6 +135,16 @@ module widgets {
 * They will help make javascript easier to use and cleaner
 * Clean up how we declare modules
 
+##Why does it matter
+* Modules would make it easier to reuse code throughout a project
+* Make modules in javascript easier to use and implement
+
 ##Conclusion
 * Modules are awesome and should be put into javascript
 * They help outside of web development
+
+##Works Cited
+
+[Classes](http://infrequently.org/2012/04/class-warfare/)
+
+[New Things Coming to Javascript - Modules](http://addyosmani.com/blog/a-few-new-things-coming-to-javascript/)
