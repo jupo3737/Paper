@@ -19,13 +19,13 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##How it looked before
 
-   	```javascript
-	var MODULE = (function (my) {
-	// add capabilities...
+```javascript
+  var MODULE = (function (my) {
+  // add capabilities...
 
-	return my;
-	}(MODULE || {}));
-	```
+  return my;
+  }(MODULE || {}));
+```
 
 ##What are modules
 * Modules are blocks of code that can be reused throughout a project
@@ -33,19 +33,19 @@ Thomas Spooner, Justin Powell, James Ontiveros
 * They make code look clean and concise
 
 ##Module Example
-	```javascript
-	module Car{
-		// import code here
-		// export code here
-	}
+```javascript
+  module Car{
+  // import code here
+  // export code here
+}
 	```
 ##Module Instances
 * These are modules that have been evaluated, linked to other modules, or holds lexically encapsulated data
 * These are basically objects that a programmer may use	
 	
-	```javascript
-	module myCar at "Car.js";
-	```
+```javascript
+  module myCar at "Car.js";
+```
 
 ##Compared to other languages
 * Python: `import fibo` (imports fibonacci function)
@@ -56,13 +56,12 @@ Thomas Spooner, Justin Powell, James Ontiveros
 * This lets programmers bring code into their project, either an entire module or just selected items from that module
 
 ##Import Example
-	```javascript
-	import Car;
+```javascript
+  import Car;
+  import drive from Car;
+  import {drive, miles} from Car;
+```
 
-	import drive from Car;
-
-	import {drive, miles} from Car;
-	```
 ##Exporting Code
 * Txporting lets the programmer choose which blocks of code can be accessed by the porgram
 * Declarations declare that a local binding at the top-level of the module is visible externally to the module
@@ -70,17 +69,17 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##Exporting Example
 
-	```javascript
-	module Car{
-		// Internal
-		var license-plate = "555-444";
-		// External
-		export var miles = 5000;
-		export function drive(speed, direction){
-			console.log('details: ', speed, direction);
-		}
+```javascript
+  module Car{
+    // Internal
+    var license-plate = "555-444";
+    // External
+      export var miles = 5000;
+       export function drive(speed, direction){
+       console.log('details: ', speed, direction);
 	}
-	```
+  }
+```
 ##Comparison to Classes
 * Modules basically have public and private variables, internal and external parts of the module
 * Modules allow for the reuse of code throughout an entire project
@@ -107,13 +106,13 @@ module widgets {
 * Es.next aims to develop a "dynamic, reflexive API for loading module scripts
 * Functionality similar to import as shown below
 
-	```javascript
-	Loader.load('car.js', function(car) {
-		console.log(car.drive(500, 'north'));
-		}, function(err) {
-	  	console.log('Error:' + err);
+```javascript
+  Loader.load('car.js', function(car) {
+  console.log(car.drive(500, 'north'));
+  }, function(err) {
+  console.log('Error:' + err);
 	});
-	```
+```
 
 ##Proposal
 * Implement modules into javascript
