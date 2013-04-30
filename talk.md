@@ -12,19 +12,35 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##Details of Development
 * Modules have been approved for ES.next
+* Modules have been in development for a while to create a seamless implementation
 * Good News!!!
 
 ##History
 * Modules have been in javascript, but they weren't easy to use
+* 
 
 ##How it looked before
 
 ```javascript
-  var MODULE = (function (my) {
-  // add capabilities...
-
-  return my;
-  }(MODULE || {}));
+FOO=function(){
+ ...
+ var x=42;
+ function frobnicator$$WhatzitThingamabobFactoryFactory_foo(a,b){return a+b};
+ ...
+ var g=this;                 // reference to the global object
+ return {import:             // return an object with a single property, "import"
+  function(prefix, object){  // which takes optional prefix and object arguments
+   object=object||g;         // if object not provided, use the global object
+   [['exportedName',Math.PI] // now a list of (export name, expression) pairs
+   ,['foo',y]
+   ,['bar',frobnicator$$WhatzitThingamabobFactoryFactory_foo]
+   ...
+   ].forEach(function(export){  // see note about forEach below
+  // for each export, we create a property on the object
+  // the property name is prefixed by the prefix if one was provided
+  // the object is either the global object, or the second argument to import()
+  object[(prefix||'')+export[0]]=export[1]})}}
+}(); // close and call the anonymous function
 ```
 
 ##What are modules
