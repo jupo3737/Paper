@@ -14,9 +14,15 @@ Thomas Spooner, Justin Powell, James Ontiveros
 * Modules have been approved for ES.next
 * Modules have been in development for a while to create a seamless implementation
 * Good News!!!
+ 
+##What are modules
+* Modules are blocks of code that can be reused throughout a project
+* They allow a programmer to choose which variables or functions to import or export
+* They make code look clean and concise
 
 ##History
 * Modules have been in javascript, but they weren't easy to use
+* Introduced in Gecko 1.9 and used for sharing code between different scopes
 * Modules were long, ugly and hard to follow at times
 
 ##How it looked before
@@ -42,11 +48,6 @@ FOO=function(){
   object[(prefix||'')+export[0]]=export[1]})}}
 }(); // close and call the anonymous function
 ```
-
-##What are modules
-* Modules are blocks of code that can be reused throughout a project
-* They allow a programmer to choose which variables or functions to import or export
-* They make code look clean and concise
 
 ##Module Example
 ```javascript
@@ -148,3 +149,5 @@ module widgets {
 [Classes](http://infrequently.org/2012/04/class-warfare/)
 
 [New Things Coming to Javascript - Modules](http://addyosmani.com/blog/a-few-new-things-coming-to-javascript/)
+
+[Modules in the Past](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using)
