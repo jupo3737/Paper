@@ -87,6 +87,22 @@ Thomas Spooner, Justin Powell, James Ontiveros
 
 ##Example Classes: Before and proposed
 
+```javascript  
+    module widgets {
+    // ...
+      class DropDownButton extends Widget {
+      constructor(attributes) {
+      super(attributes);
+      this.buildUI();
+    }
+    buildUI() {
+      this.domNode.onclick = function(){
+      // ...
+    };
+    }
+  }
+}
+```
 ##Module Loader - Tom will fill this
 * Es.next aims to develop a "dynamic, reflexive API for loading module scripts
 * Functionality similar to import as shown below
