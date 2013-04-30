@@ -37,8 +37,8 @@ Thomas Spooner, Justin Powell, James Ontiveros
   module Car{
   // import code here
   // export code here
-}
-	```
+  }
+```
 ##Module Instances
 * These are modules that have been evaluated, linked to other modules, or holds lexically encapsulated data
 * These are basically objects that a programmer may use	
@@ -93,13 +93,13 @@ module widgets {
     constructor(attributes) {
     super(attributes);
     this.buildUI();
-  }
-  buildUI() {
-   this.domNode.onclick = function(){
-   // ...
-  };
- }
-  }
+    }
+    buildUI() {
+      this.domNode.onclick = function(){
+      // ...
+      };
+    }
+    }
 }
 ```
 ##Module Loader - Tom will fill this
@@ -108,10 +108,10 @@ module widgets {
 
 ```javascript
   Loader.load('car.js', function(car) {
-  console.log(car.drive(500, 'north'));
+    console.log(car.drive(500, 'north'));
   }, function(err) {
   console.log('Error:' + err);
-	});
+  });
 ```
 
 ##Proposal
