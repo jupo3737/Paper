@@ -96,7 +96,7 @@ Loader.load('http://json.org/modules/json2.js',
     });
 ```
 
-load() has 3 arguements, being:
+load() has 3 arguments, being:
 
 * moduleURL: The address of a module to taken in, in the case above, this is car.js
 * callback: A callback function which receives the output result of attempting to load, compile and then execute the module
@@ -154,7 +154,7 @@ As we can see, classes are syntactic sugar for function in the current release o
 
 Modules in Web Development
 --------------------------
-Modules will come in handy for web development. They will be able to hold classes the build UI widgets, like the example above, so that a web developer can import which classes they want to use or they can add more. This will cut down on file use for separate UI widgets which is always a good thing in web development. A front end developer would be glad to have a widget module that contains a bunch of UI classes that control how objects on a web page react. Modules like this will make scripts on HTML pages more clean and concise, which will help load times as well.
+Modules will come in handy for web development. They will be able to hold classes the build UI widgets, like the example above, so that a web developer can import which classes they want to use or they can add more. This will cut down on file use for separate UI widgets, which is always a good thing in web development. A front-end developer would be glad to have a widget module that contains a bunch of UI classes that control how objects on a web page react. Modules like this will make scripts on HTML pages more clean and concise, which will help load times as well.
 
 The Proposal:
 -------------
